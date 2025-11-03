@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timur Özer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white overflow-x-hidden" style="background-color: var(--primary-black)">
+    
+    <div class="scroll-progress" id="scrollProgress"></div>
+    
+    <nav class="fixed top-0 w-full nav-pro z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-semibold">
+                    Timur Özer
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm">
+                    <a href="#home" class="text-gray-300 hover:text-white transition-colors" data-translate="nav_home">Ana Sayfa</a>
+                    <a href="#about" class="text-gray-300 hover:text-white transition-colors" data-translate="nav_about">Hakkımda</a>
+                    <a href="#projects" class="text-gray-300 hover:text-white transition-colors" data-translate="nav_projects">Projeler</a>
+                    <a href="#experience" class="text-gray-300 hover:text-white transition-colors" data-translate="nav_experience">Deneyim</a>
+                    <a href="#skills" class="text-gray-300 hover:text-white transition-colors" data-translate="nav_skills">Yetenekler</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white transition-colors" data-translate="nav_contact">İletişim</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="status-available">
+                        <div class="status-dot"></div>
+                        <span data-translate="status_available">Staj için müsait</span>
+                    </div>
+                    <div class="flex gap-2 text-sm font-medium">
+                        <button id="lang-tr" class="text-gray-400 hover:text-white transition-colors">TR</button>
+                        <span class="text-gray-600">/</span>
+                        <button id="lang-en" class="text-gray-400 hover:text-white transition-colors">EN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+					<h1 id="animated-heading" class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+						<span id="dynamic-title">Sadece Oyun Geliştiricisi</span><span class="cursor">&nbsp;</span>
+					</h1>
+                    <p data-translate="hero_subtitle" class="text-xl text-gray-400 mb-8 leading-relaxed">
+						Unreal Engine'de hayat bulan sanal dünyalardan, Blockchain ile güçlenen merkeziyetsiz uygulamalara kadar geniş bir yelpazede, kullanıcı odaklı ve geleceğe yön veren deneyimler tasarlıyorum.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                        <button data-translate="hero_button_projects" onclick="scrollToSection('projects')" class="btn-primary px-8 py-3 rounded-lg font-medium hover-lift">
+                            Projelerimi İncele
+                        </button>
+						<a href="TimurCV.pdf" download class="btn-secondary px-8 py-3 rounded-lg font-medium hover-lift" data-translate="hero_button_cv">
+							CV İndir
+						</a>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="metric-card">
+                            <div class="metric-number">15+</div>
+                            <div class="metric-label" data-translate="metric_projects">Projeler</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-number">7+</div>
+                            <div class="metric-label" data-translate="metric_experience">Yıl Deneyim</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-number">5+</div>
+                            <div class="metric-label" data-translate="metric_tools">Dijital Araç</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+				<a href="https://store.steampowered.com/app/3014230/Alpha_Rooms/" target="_blank" rel="noopener noreferrer" class="block h-full">
+					<div class="pro-card rounded-lg p-6 hover-lift cursor-pointer h-full flex flex-col"> 
+						<h3 class="text-2xl font-semibold mb-4" data-translate="featured_project_title">Öne Çıkan Proje</h3>
+						<div class="project-image mb-6">
+							<img src="image/gameproject1.jpg" alt="Alpha Rooms" class="w-full h-full object-cover rounded-lg">
+						</div>
+						<h3 class="text-xl font-semibold mb-3">Alpha Rooms</h3>
+						<p class="text-gray-400 mb-4 leading-relaxed flex-grow" data-translate="featured_project_desc">
+							Prosedürel seviye üretimi ve dinamik zorluk sistemi içerir. Yeni bir BackRooms deneyimi kazanmak için hemen atla!
+						</p>
+						<div class="flex flex-wrap gap-2 mb-4">
+							<span class="bg-gray-800 px-3 py-1 rounded text-sm">Unreal Engine</span>
+							<span class="bg-gray-800 px-3 py-1 rounded text-sm">Blueprint</span>
+							<span class="bg-gray-800 px-3 py-1 rounded text-sm" data-translate="featured_project_visits">46.895 ziyaret</span>
+							<span class="bg-gray-800 px-3 py-1 rounded text-sm" data-translate="featured_project_sales">107 kopya satış</span>
+						</div>
+						<div class="flex justify-between items-center mt-auto">
+							<span class="text-sm text-gray-500">2025</span>
+							<span class="text-white hover:text-gray-300 text-sm font-semibold" data-translate="see_details">
+								Detayları Gör →
+							</span>
+						</div>
+					</div>
+				</a>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<section id="about" class="py-20">
+		<div class="max-w-6xl mx-auto px-6">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl font-bold mb-4" data-translate="about_title">Hakkımda</h2>
+				<p class="text-gray-400 text-lg max-w-3xl mx-auto" data-translate="about_subtitle">
+					Benim için teknoloji, sanatsal bir vizyonu hayata geçiren bir tuval. Bu tuval üzerinde bazen Unreal Engine ile nefes alan interaktif dünyalar yaratıyor, bazen de mobil ve web platformlarında kullanıcıların hayatına yeni deneyimler kazandırıyorum. 
+				</p>
+			</div>
+			<div class="grid lg:grid-cols-3 gap-12 items-center">
+				<div class="lg:col-span-1 flex justify-center">
+					<div class="w-64 h-64 rounded-full overflow-hidden border-4 border-gray-800 shadow-lg">
+						<img src="image/profile-photo.jpg" alt="Timur Özer Profile Photo" class="w-full h-full object-cover">
+					</div>
+				</div>
+				<div class="lg:col-span-2">
+					<h3 class="text-2xl font-semibold mb-4 text-white" data-translate="about_whoami">Ben Kimim?</h3>
+					<p class="text-gray-400 mb-6 leading-relaxed" data-translate="about_desc">
+						Merhaba, ben Timur. Bahçeşehir Dijital Oyun Tasarımı öğrencisiyim ve bir oyun veya yeni bir deneyim geliştirmek benim için bir işten çok bir tutku. Yaratıcılığımı kullanarak oyunculara unutulmaz deneyimler sunan mekanikler ve hikayeler tasarlamaktan keyif alıyorum.
+					</p>
+					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+						<div class="pro-card p-4 rounded-lg">
+							<strong class="font-medium text-white" data-translate="about_name_label">İsim:</strong>
+							<span class="text-gray-400 ml-2">Timur Özer</span>
+						</div>
+						<div class="pro-card p-4 rounded-lg">
+							<strong class="font-medium text-white" data-translate="about_location_label">Konum:</strong>
+							<span class="text-gray-400 ml-2">İstanbul, Türkiye</span>
+						</div>
+						<div class="pro-card p-4 rounded-lg">
+							<strong class="font-medium text-white" data-translate="about_education_label">Eğitim:</strong>
+							<span class="text-gray-400 ml-2" data-translate="about_education_value">Dijital Oyun Tasarımı</span>
+						</div>
+						<div class="pro-card p-4 rounded-lg">
+							<strong class="font-medium text-white" data-translate="about_interests_label">İlgi Alanları:</strong>
+							<span class="text-gray-400 ml-2" data-translate="about_interests_value">Oyun, Kripto, Futbol, Tasarım</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+    <section id="projects" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="mb-16">
+                <h2 class="text-4xl font-bold mb-4" data-translate="projects_title">Projeler</h2>
+                <p class="text-gray-400 text-lg" data-translate="projects_subtitle">
+                    Farklı alanlarda geliştirdiğim projeler ve teknik detayları.
+                </p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button onclick="showCategory('games')" class="category-btn active px-6 py-3 rounded-lg font-medium transition-all" data-category="games" data-translate="projects_cat_games">
+                    🎮 Oyunlar
+                </button>
+                <button onclick="showCategory('mobile')" class="category-btn px-6 py-3 rounded-lg font-medium transition-all" data-category="mobile" data-translate="projects_cat_mobile">
+                    📱 Mobil Uygulamalar
+                </button>
+                <button onclick="showCategory('web')" class="category-btn px-6 py-3 rounded-lg font-medium transition-all" data-category="web" data-translate="projects_cat_web">
+                    🌐 Web Projeleri
+                </button>
+            </div>
+            
+            <div id="games-projects" class="project-category active">
+                <div class="grid lg:grid-cols-2 gap-8">
+				
+<a href="https://store.steampowered.com/app/3014230/Alpha_Rooms/" target="_blank" rel="noopener noreferrer" class="block h-full">
+    <div class="pro-card rounded-lg p-6 hover-lift cursor-pointer h-full flex flex-col"> 
+        <div class="project-image mb-6">
+            <img src="image/gameproject1.jpg" alt="Alpha Rooms" class="w-full h-full object-cover rounded-lg">
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Alpha Rooms</h3>
+        <p class="text-gray-400 mb-4 leading-relaxed flex-grow" data-translate="game_alpha_desc">
+            Prosedürel seviye üretimi ve dinamik zorluk sistemi içerir. Yeni bir BackRooms deneyimi kazanmak için hemen atla!
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm">Unreal Engine</span>
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm">Blueprint</span>
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm" data-translate="game_alpha_visits">46.895 ziyaret</span>
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm" data-translate="game_alpha_sales">107 kopya satış</span>
+        </div>
+        <div class="flex justify-between items-center mt-auto">
+            <span class="text-sm text-gray-500">2025</span>
+            <span class="text-white hover:text-gray-300 text-sm font-semibold" data-translate="see_details">
+                Detayları Gör →
+            </span>
+        </div>
+    </div>
+</a>
+
+<a href="https://timurozer.itch.io/kharkivline" target="_blank" rel="noopener noreferrer" class="block h-full">
+    <div class="pro-card rounded-lg p-6 hover-lift cursor-pointer h-full flex flex-col">
+        <div class="project-image mb-6">
+            <img src="image/gameproject2.jpg" alt="Kharkiv Line" class="w-full h-full object-cover rounded-lg">
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Kharkiv Line</h3>
+        <p class="text-gray-400 mb-4 leading-relaxed flex-grow" data-translate="game_kharkiv_desc">
+            First-person shooter. Metro serisinden esinlenmiş hayatta kalma oyunu. Kendi zevkine göre ister metro ister yer yüzünde aksiyona katıl!
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm">Unreal Engine</span>
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm">Blueprint</span>
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm" data-translate="game_kharkiv_visits">1.054 ziyaret</span>
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm" data-translate="game_kharkiv_sales">78 kopya satış</span>
+        </div>
+        <div class="flex justify-between items-center mt-auto">
+            <span class="text-sm text-gray-500">2024</span>
+            <span class="text-white hover:text-gray-300 text-sm font-semibold" data-translate="see_details">
+                Detayları Gör →
+            </span>
+        </div>
+    </div>
+</a>
+
+<a href="https://timurozer.itch.io/oasis" target="_blank" rel="noopener noreferrer" class="block h-full">
+    <div class="pro-card rounded-lg p-6 hover-lift cursor-pointer h-full flex flex-col">
+        <div class="project-image mb-6">
+            <img src="image/gameproject4.png" alt="Oasis" class="w-full h-full object-cover rounded-lg">
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Oasis</h3>
+        <p class="text-gray-400 mb-4 leading-relaxed flex-grow" data-translate="game_oasis_desc">
+            Kum gezegeninde hapsolmuş, düşen astroidlerden maden kazarak yeni bir üs inşa et.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm">Unreal Engine</span>
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm">Blueprint</span>
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm" data-translate="game_oasis_visits">35 ziyaret</span>
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm" data-translate="game_oasis_sales">1 kopya satış</span>
+        </div>
+        <div class="flex justify-between items-center mt-auto">
+            <span class="text-sm text-gray-500">2023</span>
+            <span class="text-white hover:text-gray-300 text-sm font-semibold" data-translate="see_details">
+                Detayları Gör →
+            </span>
+        </div>
+    </div>
+</a>
+
+<a href="https://timurozer.itch.io/neolith-sandbox-game" target="_blank" rel="noopener noreferrer" class="block h-full">
+    <div class="pro-card rounded-lg p-6 hover-lift cursor-pointer h-full flex flex-col">
+        <div class="project-image mb-6">
+            <img src="image/gameproject5.jpg" alt="Neolith" class="w-full h-full object-cover rounded-lg">
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Neolith</h3>
+        <p class="text-gray-400 mb-4 leading-relaxed flex-grow" data-translate="game_neolith_desc">
+            Sandbox Metaverse'de Göbeklitepeyi bir de böyle web3 teknolojisiyle deneyimleyin!
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm">Sandbox Game Maker</span>
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm">Visual Scripting</span>
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm" data-translate="game_neolith_visits">37 ziyaret</span>
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm" data-translate="game_neolith_sales">11 kopya satış</span>
+        </div>
+        <div class="flex justify-between items-center mt-auto">
+            <span class="text-sm text-gray-500">2023</span>
+            <span class="text-white hover:text-gray-300 text-sm font-semibold" data-translate="see_details">
+                Detayları Gör →
+            </span>
+        </div>
+    </div>
+</a>
+
+<a href="https://www.roblox.com/tr/games/226032855/Hidden-Mystery" target="_blank" rel="noopener noreferrer" class="block h-full">
+    <div class="pro-card rounded-lg p-6 hover-lift cursor-pointer h-full flex flex-col">
+        <div class="project-image mb-6">
+            <img src="image/gameproject6.png" alt="Hidden Mystery" class="w-full h-full object-cover rounded-lg">
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Hidden Mystery</h3>
+        <p class="text-gray-400 mb-4 leading-relaxed flex-grow" data-translate="game_hidden_desc">
+            Karanlık orman atmosferinde gizemi çöz ve çıkışa ulaş.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm">Roblox Studio</span>
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm">Luau</span>
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm" data-translate="game_hidden_visits">2.114 ziyaret</span>
+        </div>
+        <div class="flex justify-between items-center mt-auto">
+            <span class="text-sm text-gray-500">2023</span>
+            <span class="text-white hover:text-gray-300 text-sm font-semibold" data-translate="see_details">
+                Detayları Gör →
+            </span>
+        </div>
+    </div>
+</a>
+
+<a href="https://timurozer.itch.io/toon-tanks" target="_blank" rel="noopener noreferrer" class="block h-full">
+    <div class="pro-card rounded-lg p-6 hover-lift cursor-pointer h-full flex flex-col">
+        <div class="project-image mb-6">
+            <img src="image/gameproject3.png" alt="Toon Tanks" class="w-full h-full object-cover rounded-lg">
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Toon Tanks</h3>
+        <p class="text-gray-400 mb-4 leading-relaxed flex-grow" data-translate="game_toon_desc">
+            Düşman Tanklarını ve Turretlerini yok ederek yeni leveller keşfet!
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm">Unreal Engine</span>
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm">C++</span>
+        </div>
+        <div class="flex justify-between items-center mt-auto">
+            <span class="text-sm text-gray-500">2025</span>
+            <span class="text-white hover:text-gray-300 text-sm font-semibold" data-translate="see_details">
+                Detayları Gör →
+            </span>
+        </div>
+    </div>
+</a>
+
+                    </div>
+            </div>
+            
+            <div id="mobile-projects" class="project-category">
+                <div class="grid lg:grid-cols-2 gap-8">
+<div class="pro-card rounded-lg p-6 hover-lift cursor-pointer" onclick="showProjectDetail('Bugün Ne Yesek?')">
+    <div class="project-image mb-6">
+        <img src="image/mobileproject1.png" alt="Bugün Ne Yesek?" class="w-full h-full object-cover rounded-lg">
+    </div>
+    <h3 class="text-xl font-semibold mb-3" data-translate="mobile_whattoeat_title">Bugün Ne Yesek?</h3>
+    <p class="text-gray-400 mb-4 leading-relaxed" data-translate="mobile_whattoeat_desc">
+        Kullanıcıların günlük yemek planlamasını yapmasına yardımcı olan uygulama.
+    </p>
+    <div class="flex flex-wrap gap-2 mb-4">
+        <span class="bg-gray-800 px-3 py-1 rounded text-sm">Flutter</span>
+        <span class="bg-gray-800 px-3 py-1 rounded text-sm">Dart</span>
+        <span class="bg-gray-800 px-3 py-1 rounded text-sm" data-translate="developing_tag">(Developing)</span>
+    </div>
+    <div class="flex justify-between items-center">
+        <span class="text-sm text-gray-500">2025</span>
+        <button class="text-white hover:text-gray-300 text-sm" data-translate="see_details">
+            Detayları Gör →
+        </button>
+    </div>
+</div>
+                    </div>
+            </div>
+            
+            <div id="web-projects" class="project-category">
+                <div class="grid lg:grid-cols-2 gap-8">
+<a href="https://baklava.network" target="_blank" rel="noopener noreferrer" class="block h-full">
+    <div class="pro-card rounded-lg p-6 hover-lift cursor-pointer h-full flex flex-col">
+        <div class="project-image mb-6">
+            <img src="image/webproject1.png" alt="Baklava Network" class="w-full h-full object-cover rounded-lg">
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Baklava Network</h3>
+        <p class="text-gray-400 mb-4 leading-relaxed flex-grow" data-translate="web_baklava_desc">
+            Baklava Blockchain için kendim tarafımdan geliştirilmiş websitesi.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm">Html</span>
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm">CSS</span>
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm">Javascript</span>
+        </div>
+        <div class="flex justify-between items-center mt-auto">
+            <span class="text-sm text-gray-500">2024</span>
+            <span class="text-white hover:text-gray-300 text-sm font-semibold" data-translate="see_details">
+                Detayları Gör →
+            </span>
+        </div>
+    </div>
+</a>
+
+<a href="https://catiturkiye.online" target="_blank" rel="noopener noreferrer" class="block h-full">
+    <div class="pro-card rounded-lg p-6 hover-lift cursor-pointer h-full flex flex-col">
+        <div class="project-image mb-6">
+            <img src="image/webproject2.png" alt="Çatı" class="w-full h-full object-cover rounded-lg">
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Çatı</h3>
+        <p class="text-gray-400 mb-4 leading-relaxed flex-grow" data-translate="web_cati_desc">
+            Üniversite öğrencilerin ev arkadaşı bulmaları için geliştirilen websitesi.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm">Html</span>
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm">CSS</span>
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm">Javascript</span>
+        </div>
+        <div class="flex justify-between items-center mt-auto">
+            <span class="text-sm text-gray-500">2024</span>
+            <span class="text-white hover:text-gray-300 text-sm font-semibold" data-translate="see_details">
+                Detayları Gör →
+            </span>
+        </div>
+    </div>
+</a>
+
+<a href="https://timurozer.github.io/DeepWatch/login.html" target="_blank" rel="noopener noreferrer" class="block h-full">
+    <div class="pro-card rounded-lg p-6 hover-lift cursor-pointer h-full flex flex-col">
+        <div class="project-image mb-6">
+            <img src="image/webproject3.png" alt="DeepWatch" class="w-full h-full object-cover rounded-lg">
+        </div>
+        <h3 class="text-xl font-semibold mb-3">DeepWatch</h3>
+        <p class="text-gray-400 mb-4 leading-relaxed flex-grow" data-translate="web_deepwatch_desc">
+            Github üzerinde reklamsız dizi/film izleme sitesi prototip. Kullanıcı Adı: DeepWatch Şifre: Deep15987
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm">Html</span>
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm">CSS</span>
+            <span class="bg-gray-800 px-3 py-1 rounded text-sm">Javascript</span>
+        </div>
+        <div class="flex justify-between items-center mt-auto">
+            <span class="text-sm text-gray-500">2024</span>
+            <span class="text-white hover:text-gray-300 text-sm font-semibold" data-translate="see_details">
+                Detayları Gör →
+            </span>
+        </div>
+    </div>
+</a>
+
+                    </div>
+            </div>
+            
+<section id="experience" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="mb-16">
+            <h2 class="text-4xl font-bold mb-4" data-translate="exp_title">Deneyim & Eğitim</h2>
+            <p class="text-gray-400 text-lg" data-translate="exp_subtitle">
+                Akademik geçmişim ve sektöre yönelik pratik tecrübelerim.
+            </p>
+        </div>
+        
+        <div class="space-y-8">
+            <div class="pro-card rounded-lg p-6">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-xl">
+                        🎓
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold mb-1" data-translate="exp_uni_title">Bahçeşehir Üniversitesi, Dijital Oyun Tasarımı</h3>
+                        <p class="text-gray-400 mb-3" data-translate="exp_uni_degree">Lisans Derecesi • 2022 - Devam Ediyor</p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                            <li data-translate="exp_uni_item1">Oyun Mekaniği Tasarımı ve Prototipleme</li>
+                            <li data-translate="exp_uni_item2">Blueprint ve C++ Programlama</li>
+                            <li data-translate="exp_uni_item3">Unreal Engine ile Oyun Geliştirme</li>
+                            <li data-translate="exp_uni_item4">3D Modelleme ve Animasyon Temelleri</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pro-card rounded-lg p-6">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-xl">
+                        💼
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold mb-1" data-translate="exp_dev_title">Oyun Geliştirici Kariyeri</h3>
+                        <p class="text-gray-400 mb-3" data-translate="exp_dev_date">Kendi Oyunum • Yaz 2024</p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                            <li data-translate="exp_dev_item1">Steam'de kendi oyunum bulunmakta "Alpha Rooms".</li>
+                            <li data-translate="exp_dev_item2">Şahıs şirketi kurarak oyun satışı üzerinden gelir elde etme.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="pro-card rounded-lg p-6">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-xl">
+                        💼
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold mb-1" data-translate="exp_ad_title">Reklamcılık Deneyimi</h3>
+                        <p class="text-gray-400 mb-3" data-translate="exp_ad_date">Philip Kotler Impact Awards • Bahar 2025</p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                            <li data-translate="exp_ad_item1">Bahçeşehir Üniversitesini tek temsil eden yarışmacı.</li>
+                            <li data-translate="exp_ad_item2">Çırağan Sarayında yapılan orginazyona katılma hakkı kazanma (İlk 10)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>			
+            <div class="pro-card rounded-lg p-6">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-xl">
+                        💼
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold mb-1" data-translate="exp_jam_title">GameJam Deneyimleri</h3>
+                        <p class="text-gray-400 mb-3"></p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                            <li data-translate="exp_jam_item1">Mağara Jam #5 • Sonbahar 2022</li>
+                            <li data-translate="exp_jam_item2">BUG Halloween Jam • Sonbahar 2022</li>
+                            <li data-translate="exp_jam_item3">BUG Fall Jam 22 • Sonbahar 2022</li>
+                            <li data-translate="exp_jam_item4">BUG Spring Jam 23 • Bahar 2023 (GG Awards kazandık)</li>	
+                            <li data-translate="exp_jam_item5">Sandbox Gobeklitepe GameJam • Kış 2023</li>			
+                            <li data-translate="exp_jam_item6">BUG Spring Jam 24 • Sonbahar 2024</li>								
+                        </ul>
+                    </div>
+                </div>
+            </div>									
+        </div>
+
+        <div class="mt-16">
+            <h3 class="text-3xl font-bold mb-8 text-center" data-translate="gallery_title">Fotoğraf Galerisi</h3>
+            <div class="gallery-wrapper">
+                <div class="slider-viewport">
+                    <div class="slider-track">
+                        <div class="pro-card rounded-lg p-2 hover-lift cursor-pointer gallery-item">
+                            <img src="image/gallery-1.jpg" alt="Gallery Photo 1" class="w-full h-full object-cover rounded-md">
+                        </div>
+                        <div class="pro-card rounded-lg p-2 hover-lift cursor-pointer gallery-item">
+                            <img src="image/gallery-2.jpg" alt="Gallery Photo 2" class="w-full h-full object-cover rounded-md">
+                        </div>
+                        <div class="pro-card rounded-lg p-2 hover-lift cursor-pointer gallery-item">
+                            <img src="image/gallery-3.jpg" alt="Gallery Photo 3" class="w-full h-full object-cover rounded-md">
+                        </div>
+                        <div class="pro-card rounded-lg p-2 hover-lift cursor-pointer gallery-item">
+                            <img src="image/gallery-4.jpg" alt="Gallery Photo 4" class="w-full h-full object-cover rounded-md">
+                        </div>
+                        <div class="pro-card rounded-lg p-2 hover-lift cursor-pointer gallery-item">
+                            <img src="image/gallery-5.jpeg" alt="Gallery Photo 5" class="w-full h-full object-cover rounded-md">
+                        </div>
+                        <div class="pro-card rounded-lg p-2 hover-lift cursor-pointer gallery-item">
+                            <img src="image/gallery-6.jpeg" alt="Gallery Photo 6" class="w-full h-full object-cover rounded-md">
+                        </div>
+                    </div>				
+                </div>
+                <button id="slider-prev" class="slider-button prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+                </button>
+                <button id="slider-next" class="slider-button next">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                </button>
+            </div>			
+        </div>
+    </div>
+</section>
+
+	<section id="skills" class="py-20">
+		<div class="max-w-6xl mx-auto px-6">
+			<div class="mb-16">
+				<h2 class="text-4xl font-bold mb-4" data-translate="skills_title">Yetenekler</h2>
+				<p class="text-gray-400 text-lg" data-translate="skills_subtitle">
+					Projelerimde kullandığım temel teknolojiler, araçlar ve yaratıcı becerilerim.
+				</p>
+			</div>
+			
+			<div class="grid lg:grid-cols-2 gap-12">
+				<div>
+					<h3 class="text-2xl font-semibold mb-8" data-translate="skills_tech_title">Teknik Yetenekler</h3>
+					<div class="space-y-6">
+						<div>
+							<div class="flex justify-between mb-2">
+								<span class="font-medium" data-translate="skill_unreal">Unreal Engine</span>
+								<span class="text-gray-400">90%</span>
+							</div>
+							<div class="skill-bar-pro">
+								<div class="skill-fill-pro" data-width="90"></div>
+							</div>
+						</div>
+						<div>
+							<div class="flex justify-between mb-2">
+								<span class="font-medium" data-translate="skill_blueprint">Blueprint Programlama</span>
+								<span class="text-gray-400">85%</span>
+							</div>
+							<div class="skill-bar-pro">
+								<div class="skill-fill-pro" data-width="85"></div>
+							</div>
+						</div>
+						<div>
+							<div class="flex justify-between mb-2">
+								<span class="font-medium" data-translate="skill_gamedesign">Oyun Mimarisi ve Tasarım</span>
+								<span class="text-gray-400">75%</span>
+							</div>
+							<div class="skill-bar-pro">
+								<div class="skill-fill-pro" data-width="75"></div>
+							</div>
+						</div>
+						<div>
+							<div class="flex justify-between mb-2">
+								<span class="font-medium" data-translate="skill_cpp">C++ Programlama (Temel)</span>
+								<span class="text-gray-400">35%</span>
+							</div>
+							<div class="skill-bar-pro">
+								<div class="skill-fill-pro" data-width="35"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div>
+					<h3 class="text-2xl font-semibold mb-8" data-translate="skills_creative_title">Yaratıcı Yetenekler</h3>
+					<div class="space-y-6">
+						<div>
+							<div class="flex justify-between mb-2">
+								<span class="font-medium" data-translate="skill_blender">3D Modelleme (Blender)</span>
+								<span class="text-gray-400">40%</span>
+							</div>
+							<div class="skill-bar-pro">
+								<div class="skill-fill-pro" data-width="40"></div>
+							</div>
+						</div>
+						<div>
+							<div class="flex justify-between mb-2">
+								<span class="font-medium" data-translate="skill_uiux">UI/UX Tasarımı</span>
+								<span class="text-gray-400">40%</span>
+							</div>
+							<div class="skill-bar-pro">
+								<div class="skill-fill-pro" data-width="40"></div>
+							</div>
+						</div>
+						<div>
+							<div class="flex justify-between mb-2">
+								<span class="font-medium" data-translate="skill_level">Seviye Tasarımı</span>
+								<span class="text-gray-400">30%</span>
+							</div>
+							<div class="skill-bar-pro">
+								<div class="skill-fill-pro" data-width="30"></div>
+							</div>
+						</div>
+						 <div>
+							<div class="flex justify-between mb-2">
+								<span class="font-medium" data-translate="skill_animation">Karakter Animasyonu (Temel)</span>
+								<span class="text-gray-400">15%</span>
+							</div>
+							<div class="skill-bar-pro">
+								<div class="skill-fill-pro" data-width="15"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="mt-16">
+				<h3 class="text-2xl font-semibold mb-8 text-center" data-translate="tools_title">Araçlar & Teknolojiler</h3>
+				<div class="flex flex-wrap justify-center gap-4">
+					<div class="pro-card rounded-lg p-4 text-center min-w-[100px]"><div class="text-2xl mb-2">🎮</div><div class="text-sm">Unreal Engine</div></div>
+					<div class="pro-card rounded-lg p-4 text-center min-w-[100px]"><div class="text-2xl mb-2">🗺️</div><div class="text-sm">Blueprint</div></div>
+					<div class="pro-card rounded-lg p-4 text-center min-w-[100px]"><div class="text-2xl mb-2">⚙️</div><div class="text-sm">C++</div></div>
+					<div class="pro-card rounded-lg p-4 text-center min-w-[100px]"><div class="text-2xl mb-2">🧰</div><div class="text-sm">Visual Studio</div></div>
+					<div class="pro-card rounded-lg p-4 text-center min-w-[100px]"><div class="text-2xl mb-2">🎨</div><div class="text-sm">Blender</div></div>
+					<div class="pro-card rounded-lg p-4 text-center min-w-[100px]"><div class="text-2xl mb-2">🖼️</div><div class="text-sm">Adobe Photoshop</div></div>
+					<div class="pro-card rounded-lg p-4 text-center min-w-[100px]"><div class="text-2xl mb-2">🔀</div><div class="text-sm">GitHub</div></div>
+				</div>
+			</div>
+		</div>
+	</section>
+<section id="contact" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4" data-translate="contact_title">İletişime Geçin</h2>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto" data-translate="contact_subtitle">
+                Yeni projeler, staj fırsatları veya sadece bir merhaba demek için aşağıdaki kanallardan bana ulaşabilirsiniz.
+            </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-12">
+            <div>
+                <div class="pro-card rounded-lg p-8">
+                    <h3 class="text-2xl font-semibold mb-6" data-translate="contact_info_title">Bilgilerim</h3>
+                    <div class="space-y-6">
+                        <a href="mailto:timurozer04@gmail.com" class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-xl group-hover:bg-white group-hover:text-black transition-colors duration-300">
+                                📧
+                            </div>
+                            <div>
+                                <div class="font-semibold text-white" data-translate="contact_email_label">E-posta</div>
+                                <div class="text-gray-400">timurozer04@gmail.com</div>
+                            </div>
+                        </a>
+						<a href="https://www.linkedin.com/in/timur-%C3%B6zer-1a6258253/" target="_blank" class="flex items-center gap-4 group">
+							<div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-xl group-hover:bg-white group-hover:text-black transition-colors duration-300">
+								💼
+							</div>
+							<div>
+								<div class="font-semibold text-white">LinkedIn</div>
+								<div class="text-gray-400">/in/timur-özer</div>
+							</div>
+						</a>
+                        <a href="https://github.com/TimurOzer" target="_blank" class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-xl group-hover:bg-white group-hover:text-black transition-colors duration-300">
+                                💻
+                            </div>
+                            <div>
+                                <div class="font-semibold text-white">GitHub</div>
+                                <div class="text-gray-400">/TimurOzer</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="pro-card rounded-lg p-8">
+                    <h3 class="text-2xl font-semibold mb-6" data-translate="contact_form_title">Mesaj Gönderin</h3>
+                    <form class="space-y-6" onsubmit="handleFormSubmit(event)">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2 text-gray-300" data-translate="contact_form_name_label">Ad Soyad</label>
+                            <input type="text" id="name" class="form-input w-full" data-translate-placeholder="contact_form_name_placeholder" placeholder="Adınız ve soyadınız" required>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2 text-gray-300" data-translate="contact_form_email_label">E-posta Adresiniz</label>
+                            <input type="email" id="email" class="form-input w-full" data-translate-placeholder="contact_form_email_placeholder" placeholder="email@ornek.com" required>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2 text-gray-300" data-translate="contact_form_message_label">Mesajınız</label>
+                            <textarea id="message" class="form-input w-full h-32 resize-none" data-translate-placeholder="contact_form_message_placeholder" placeholder="Buraya mesajınızı yazın..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary w-full px-6 py-3 rounded-lg font-medium hover-lift" data-translate="contact_form_submit_button">
+                            Mesajı Gönder
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="py-12 border-t" style="border-color: var(--border-gray);">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8 mb-8 text-center md:text-left">
+            
+            <div>
+                <h3 class="text-xl font-bold text-white mb-2">Timur Özer</h3>
+                <p class="text-gray-400 text-sm" data-translate="footer_motto">
+                    Gelecek henüz yazılmadı. Şimdiye kadar.
+                </p>
+            </div>
+            
+            <div class="md:text-center">
+                <h4 class="font-semibold text-white mb-3" data-translate="footer_connect">Bağlantıda Kalın</h4>
+                <div class="flex justify-center md:justify-center space-x-4">
+                    <a href="https://github.com/TimurOzer" target="_blank" aria-label="GitHub" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/timur-%C3%B6zer-1a6258253/" target="_blank" aria-label="LinkedIn" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="md:text-right">
+                <h4 class="font-semibold text-white mb-3" data-translate="footer_sitemap">Site Haritası</h4>
+                <div class="space-y-2 text-sm">
+                    <a href="#about" class="block text-gray-400 hover:text-white transition-colors" data-translate="nav_about">Hakkımda</a>
+                    <a href="#projects" class="block text-gray-400 hover:text-white transition-colors" data-translate="nav_projects">Projeler</a>
+                    <a href="#experience" class="block text-gray-400 hover:text-white transition-colors" data-translate="nav_experience">Deneyim</a>
+                    <a href="#skills" class="block text-gray-400 hover:text-white transition-colors" data-translate="nav_skills">Yetenekler</a>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="border-t mt-8 pt-8 text-center text-sm text-gray-500" style="border-color: var(--border-gray)">
+            <p data-translate="footer_copyright1">Timur Özer. Tüm haklarım saklı değildir :D</p>
+            <p class="mt-1" data-translate="footer_copyright2">Tasarım ve Geliştirme Bana Aittir.</p>
+        </div>
+    </div>
+</footer>
+
+<div id="language-modal-overlay" class="fixed hidden inset-0 bg-black bg-opacity-80 z-[100] flex justify-center items-center">
+    <div class="pro-card p-8 rounded-lg text-center w-full max-w-md mx-4">
+        <h2 class="text-2xl font-bold mb-4">Choose Your Experience</h2>
+        <p class="text-gray-400 mb-8">Please select a language to continue.</p>
+        <div class="flex gap-4">
+            <button onclick="selectLanguage('tr')" class="btn-secondary w-full px-6 py-3 rounded-lg font-medium">
+                Türkçe
+            </button>
+            <button onclick="selectLanguage('en')" class="btn-primary w-full px-6 py-3 rounded-lg font-medium">
+                English
+            </button>
+        </div>
+    </div>
+</div>
+
+<div id="lightbox" class="lightbox-hidden">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+</div>
+    <script src="script.js" defer></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+</body>
+</html>
